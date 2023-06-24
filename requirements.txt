@@ -3,4 +3,5 @@ langchain
 numpy
 openai
 python-dotenv
+bs4
 Gunicorn
