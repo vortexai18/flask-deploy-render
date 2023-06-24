@@ -15,7 +15,7 @@ def query():
     if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
         return jsonify({'error': 'OpenAI Key is not set'}), 500
 
-    agent = create_csv_agent(OpenAI(temperature=0), "/Users/shreyas/Downloads/AAPL.csv")
+    agent = create_csv_agent(OpenAI(temperature=0), "./AAPL.csv")
     user_question = request.form.get('query')
 
     if user_question is None or user_question == "":
